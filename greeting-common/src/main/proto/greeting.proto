@@ -1,0 +1,22 @@
+syntax = "proto3"
+
+package com.dailycoder.grpcdemo;
+
+
+option java_multiple_files = true;
+option java_package = "com.dailycoder.grpcdemo";
+
+
+service GreetingService{
+    rpc greet(GreetingRequest) returns (GreetingResponse){
+
+    }
+}
+
+message GreetingRequest{
+    string message = 1;
+}
+
+message GreetingResponse{
+    string message = 1;
+}
